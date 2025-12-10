@@ -1,5 +1,9 @@
 # Description: Setup DVC for the project
 
+source .env
+
+dvc init
+
 # Set the S3 bucket name
 dvc remote add ${S3_BUCKET_NAME} s3://${S3_BUCKET_NAME}/dvcstore
 dvc remote modify ${S3_BUCKET_NAME} endpointurl ${S3_ENDPOINT_URL}
